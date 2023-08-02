@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .main{
+        border:2px solid black;
+       padding:60px;
+        width:300px;
+        margin-left:35%;
+        
+             
+    }
+    .main1{
+      align-items: center;
+      display: flex;
+      gap:10px;
+      margin-left:10%;
+    }
+    .aa{
+        border:2px solid black;
+        height:20px;
+        width:130px;
+        
+        
+    }
+    #final{
+      margin-left:16%;
+      animation:ani 2s linear infinite;
+
+    }
+    .bb{
+        border:2px solid black;
+        height:20px;
+        width:130px;
+        
+    }
+    button{
+        padding:10px;
+        background-color:orange;
+        margin-left:33%;
+    }
+    input{
+      margin-left:30%;
+    }
+    @keyframes ani{
+   100% {
+      transform:scale(1.2)
+    }}
+    </style>
+</head>
+<body>
+
+    <div class="main">
+      <h1>Calculate Your BMI</h1>
+      <br>
+    <input type="range" min="0" max="200" id="one" onchange="range()">
+
+      <div class="main1"> 
+         <h3>Weight</h3>
+         <div class="aa">
+          </div>
+         <h3>kg</h3>
+      </div>
+
+      <input type="range" min="0" max="200" id="two" onchange="range()">
+      
+
+    <div class="main1">
+       
+     <h3>Height</h3>
+     <div class="bb">
+      
+     </div>
+     <h3>cm</h3>
+    </div>
+
+      
+      <button onclick="myCal()">CALCULATE</button>
+      <div>
+        <p id="final"></p>
+    </div>
+
+    </div>
+
+    
+
+     <script>
+      
+    function myCal()
+    {
+     let a=document.getElementById("one").value;
+     let b=document.getElementById("two").value;
+     
+     let Bmi=((a)/(b*b))*1000;
+    
+    
+     document.getElementById("final").innerHTML="Your BMI Is:"+Bmi;
+
+    }
+    function range()
+    {
+      let a=document.querySelector("#one").value
+      let b=document.querySelector("#two").value
+      let one=document.querySelector(".aa")
+      let two=document.querySelector(".bb")
+      one.innerHTML=a
+      two.innerHTML=b
+    }
+
+
+     </script>
+
+    
+    
+    </body>
+</html>
