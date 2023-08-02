@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .main{
+        border:2px solid black;
+        height:200px;
+        width:400px;
+        margin-left:30%;
+        background-color:antiquewhite;
+        padding:20px;
+    }
+    .a{
+        border:2px solid black;
+        height:50px;
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+     <h1>Enter the string</h1>
+     <label>string:</label>
+     <input type="text" id="in">
+     <button type="submit" onclick="submit()">Submit</button>
+     
+     <div class="a" id="show">
+       <p id="pa"></p>
+     </div>
+   </div>
+     
+     <script>
+        
+        
+        function submit()
+        {
+            let n=document.getElementById("in").value;
+            let m=""
+           for(let i=n.length-1;i>=0;i--)
+           {
+            m+=n[i]
+           }
+           if(n==m)
+           {
+           document.getElementById("pa").innerHTML=n+" "+"is palindrome"
+           }
+           else{
+            document.getElementById("pa").innerHTML=n+" "+"is not palindrome"
+           }
+        
+     }
+        
+     </script>
+    </div>
+
+
+</body>
+</html>
