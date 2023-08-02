@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+       body{
+        display: flex;
+        justify-content: center;
+        background-color: aqua;
+        font-family: Arial, Helvetica, sans-serif;
+       }
+       .main{
+        padding-left:60px;
+        border:2px solid black;
+        height:500px;
+        width:300px;
+        border-radius:10px;
+        background-color:white;
+        padding-top:30px;
+        
+       }
+       h1{
+         margin-left:45px;
+       }
+       input{
+        padding:10px;
+       }
+       button{
+        margin-left:50px;
+        padding:10px;
+        color: aliceblue;
+        background-color: black;
+        margin-top:10px;
+       }
+       .show{
+        border:1px solid black;
+        height:10px;
+        width:200px;
+        background-color: antiquewhite;
+       }
+       .ul{
+        margin-left:-20px;
+       }
+    
+    </style>
+</head>
+<body>
+    
+    <form class="main">
+        <h1>Welcome</h1>
+        <div >
+       <label>Email</label>
+        <br>
+       <input type="email" id="email"placeholder="Enter your email address" >
+       </div>
+        <br>
+       <div >
+       <label>Password</label>
+       <br>
+       <input type="password" id="pass"placeholder="Enter your password">
+       </div>
+        <br>
+        <div class="show"></div>
+        <br>
+
+          <input type="checkbox">
+          <label>Lowercase & Uppercase</label>
+          <br>
+          <input type="checkbox">
+          <label>Number(0-9)</label>
+          <br>
+          <input type="checkbox">
+          <label>Special Character(!@#$%^&*)</label>
+          <br>
+          <input type="checkbox">
+          <label>Atleast 8 Character</label>
+          
+       <button>Create Account</button>
+       <br>
+       <p>Already have an account? Signin<a href="">here</a></p>
+
+       </div>
+
+
+
+    </form>
+
+    
+</body>
+</html>
